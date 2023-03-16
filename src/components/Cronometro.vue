@@ -11,7 +11,7 @@ export default defineComponent({
   name: 'Cronometro',
 
   props: {
-    elapsedTime: {
+    timeSeconds: {
       type: Number,
       default: 0
     }
