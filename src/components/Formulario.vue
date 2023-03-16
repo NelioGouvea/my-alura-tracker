@@ -6,9 +6,7 @@
       </div>
       <div class="column">
         <div class="is-flex is-align-items-center is-justify-content-space-between">
-          <section>
-            <strong>{{ elapsedTime }}</strong>
-          </section>
+          <Cronometro :elapsed-time="timeSeconds"/>
           <button class="button" @click="iniciar">
             <span class="icon">
                 <i class="fas fa-play"></i>
@@ -29,19 +27,17 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Cronometro from "@/components/Cronometro.vue";
 
 export default defineComponent({
   name: 'Formulario',
+  components: {
+    Cronometro,
+  },
   data(){
     return {
       timeSeconds: 0,
       cronometro: 0,
-    }
-  },
-
-  computed: {
-    elapsedTime() : string {
-      return new Date(this.timeSeconds * 1000).toISOString().substring(11,8);
     }
   },
 
