@@ -2,10 +2,12 @@
   <div class="box">
     <div class="columns">
       <div class="columns" role="form" aria-label="Formulário para criação de uma nova tarefa">
-        <input type="text" class="input" placeholder="Qual tarefa você deseja iniciar ?"/>
+        <input type="text" class="input" placeholder="Qual tarefa você deseja iniciar ?" v-model="description"/>
       </div>
       <div class="column">
-        <Temporizador />
+        <Temporizador
+          @timer-ended="timerEnded"
+        />
       </div>
     </div>
   </div>
@@ -19,6 +21,18 @@ export default defineComponent({
   name: 'Formulario',
   components: {
     Temporizador,
+  },
+
+  data() {
+    return {
+      description: '',
+    };
+  },
+
+  methods: {
+    timerEnded(timeSeconds : number ) :void {
+      this.description = '';
+    },
   },
 });
 

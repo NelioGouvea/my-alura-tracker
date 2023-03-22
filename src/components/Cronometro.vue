@@ -19,7 +19,7 @@ export default defineComponent({
 
   computed: {
     elapsedTime(): string {
-      return new Date(this.timeSeconds * 1000).toISOString().substring(11, 8);
+      return new Date(this.timeSeconds * 1000).toISOString().substring(11, 19);
     }
   },
 })
