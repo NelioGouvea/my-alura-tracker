@@ -1,6 +1,6 @@
 <template>
   <section>
-    <strong>{{ elapsedTime }}</strong>
+    <strong class="display">{{ elapsedTime }}</strong>
   </section>
 </template>
 
@@ -19,12 +19,14 @@ export default defineComponent({
 
   computed: {
     elapsedTime(): string {
-      return new Date(this.timeSeconds * 1000).toISOString().substring(11, 19);
+      return new Date(this.timeSeconds * 1000).toISOString().substr(11, 8);
     }
   },
 })
 </script>
 
-<style>
-
+<style scoped>
+.display {
+  color: var(--texto-primario);
+}
 </style>
