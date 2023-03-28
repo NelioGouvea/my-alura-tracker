@@ -1,10 +1,10 @@
 <template>
     <Formulario @aoSalvarTarefa="salvarTarefa"/>
     <div class="lista">
-      <Tarefa  v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa"/>
       <Box v-if="emptyList">
-        Você não está muito produtivo hoje :(
+        Você não está muito produtivo hoje <span class="has-text-weight-bold">:(</span>
       </Box>
+      <Tarefa  v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa"/>
     </div>
 </template>
 
@@ -43,10 +43,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style>
-
-.lista{
-  padding: 1.25rem;
-}
-</style>

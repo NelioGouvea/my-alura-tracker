@@ -1,6 +1,6 @@
 <template>
   <section>
-    <strong class="display">{{ elapsedTime }}</strong>
+    <i class="far fa-clock"></i>{{ elapsedTime }}
   </section>
 </template>
 
@@ -25,8 +25,5 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
-.display {
-  color: var(--texto-primario);
-}
+<style>
 </style>

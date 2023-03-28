@@ -3,7 +3,7 @@
     <div class="column is-one-quarter">
       <BarraLateral @ao-tema-alterado="trocarTema"/>
     </div>
-    <div class="column is-three-quarter conteudo">
+    <div class="column is-three-quarters conteudo">
       <router-view></router-view>
     </div>
   </main>
@@ -44,6 +44,10 @@ main {
 main.modo-escuro {
   --bg-primario: #2b2d42;
   --texto-primario: #ddd;
+}
+
+.lista {
+  padding: 1.25rem;
 }
 
 .conteudo {
