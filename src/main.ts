@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+// import '@fortawesome/fontawesome-free/css/all.css';
 import roteador from "@/roteador";
+import {key, store} from "@/store";
 
 createApp(App)
-    .component("font-awesome-icon", FontAwesomeIcon)
     .use(roteador)
+    .use(store, key)
     .mount("#app");
