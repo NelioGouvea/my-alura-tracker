@@ -14,12 +14,12 @@ export default defineComponent({
     timeSeconds: {
       type: Number,
       default: 0
-    }
+    },
   },
 
   computed: {
     elapsedTime(): string {
-      return new Date(this.timeSeconds * 1000).toISOString().substr(11, 8);
+      return new Date(this.timeSeconds * 1000).toISOString().substr(11, 8)
     }
   },
 })
