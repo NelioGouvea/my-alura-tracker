@@ -1,10 +1,10 @@
 <template>
   <div class="box formulario">
     <div class="columns">
-      <div class="columns is-5" role="form" aria-label="Formulário para criação de uma nova tarefa">
+      <div class="column is-5" role="form" aria-label="Formulário para criação de uma nova tarefa">
         <input type="text" class="input" placeholder="Qual tarefa você deseja iniciar ?" v-model="description"/>
       </div>
-      <div class="column is-3">
+      <div class="column ">
         <div class="select">
           <select v-model="idProjeto">
             <option value="">Selecione o projeto</option>
@@ -18,7 +18,7 @@
           </select>
         </div>
       </div>
-      <div class="column">
+      <div class="column is-3">
         <Temporizador
           @timer-ended="timerEnded"
         />

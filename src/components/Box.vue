@@ -14,6 +14,8 @@ export default defineComponent({
     return {
       estilos: {
         background: '#FAF0CA',
+        padding: '1rem',
+        marginBottom: '1rem',
       }
     };
   },

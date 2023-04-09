@@ -1,7 +1,7 @@
 <template>
     <Box>
         <div class="columns">
-            <div class="column is-4">
+            <div class="column is-6">
                 {{ tarefa.descricao || 'Tarefa sem desrição' }}
             </div>
 
@@ -23,6 +23,7 @@ import Box from "@/components/Box.vue";
 
 export default defineComponent({
     name: 'Tarefa',
+    components: {Box},
 
     componentes: {
         Cronometro,
