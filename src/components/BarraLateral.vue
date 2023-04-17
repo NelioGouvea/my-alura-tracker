@@ -12,7 +12,7 @@
       <ul>
         <li>
           <router-link to="/">
-            <i class="fas fa-task"></i>
+            <i class="fas fa-tasks"></i>
             Tarefas
           </router-link>
         </li>
