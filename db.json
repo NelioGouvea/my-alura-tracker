@@ -18,6 +18,15 @@
         "nome": "Alura Tracker 3.0",
         "id": 1
       }
+    },
+    {
+      "duracaoEmSegundos": 2,
+      "descricao": "Tarefa Teste Alterar",
+      "projeto": {
+        "nome": "ByteBank",
+        "id": 2
+      },
+      "id": 2
     }
   ]
 }
