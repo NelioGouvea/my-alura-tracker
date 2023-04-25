@@ -16,7 +16,7 @@ const rotas: RouteRecordRaw[] = [
         children : [
             {
                 path: '',
-                name: 'Peojetos',
+                name: 'Projetos',
                 component: Lista
             },
             {
