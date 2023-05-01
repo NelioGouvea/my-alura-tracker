@@ -23,8 +23,14 @@ export const tarefa: Module<EstadoTarefa, Estado> = {
         },
     },
     actions: {
-        [OBTER_TAREFAS]({commit}) {
-            http.get('tarefas')
+        [OBTER_TAREFAS]({commit}, filter: string) {
+            let url = 'tarefas'
+
+            if(filter) {
+                url += '?descricao=' + filter
+            }
+
+            return http.get(url)
                 .then(response => commit(DEFINIR_TAREFAS, response.data))
         },
         [CADASTRAR_TAREFA]({commit}, tarefa: ITarefa) {
@@ -33,7 +39,7 @@ export const tarefa: Module<EstadoTarefa, Estado> = {
         },
         [ALTERAR_TAREFA]({commit}, tarefa: ITarefa) {
             return http.put(`/tarefas/${tarefa.id}`, tarefa)
-                .then(() => commit('ALTERA_TAREFA', tarefa))
+                .then(() => commit(ALTERA_TAREFA, tarefa))
         },
     }
 }
